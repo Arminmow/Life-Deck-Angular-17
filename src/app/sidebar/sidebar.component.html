@@ -1,0 +1,12 @@
+<button nz-button nzType="primary" (click)="open()">Open</button>
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  nzPlacement="left"
+  nzTitle="Sidebar"
+  (nzOnClose)="close()"
+>
+  <ng-container *nzDrawerContent>
+    <app-sidebar-menu [activities]="activities" />
+  </ng-container>
+</nz-drawer>
