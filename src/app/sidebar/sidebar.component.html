@@ -7,20 +7,6 @@
   (nzOnClose)="close()"
 >
   <ng-container *nzDrawerContent>
-    <!-- This menu should be another component that takes activities and render a menu with sub menues for each activity -->
-    <ul nz-menu nzMode="inline">
-      <li nz-submenu nzTitle="Chess">
-        <ul>
-          <li nz-menu-item>Learning Chess</li>
-          <li nz-menu-item>Playing Chess</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Gaming">
-        <ul>
-          <li nz-menu-item>Warhammer 2</li>
-          <li nz-menu-item>BRO</li>
-        </ul>
-      </li>
-    </ul>
+    <app-sidebar-menu [activities]="activities" />
   </ng-container>
 </nz-drawer>
