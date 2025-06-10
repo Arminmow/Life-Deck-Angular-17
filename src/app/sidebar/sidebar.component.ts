@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [NzDrawerModule, NzButtonModule],
+  imports: [NzDrawerModule, NzButtonModule , NzMenuModule],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 

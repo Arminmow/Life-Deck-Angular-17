@@ -1,0 +1,9 @@
+<ul nz-menu nzMode="inline">
+  <li nz-submenu *ngFor="let activity of activities" [nzTitle]="activity.title">
+    <ul>
+      <li nz-menu-item *ngFor="let subActivity of activity.subActivities">
+        {{ subActivity.title }}
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -1,14 +1,26 @@
- <button nz-button nzType="primary" (click)="open()">Open</button>
-    <nz-drawer
-      [nzClosable]="false"
-      [nzVisible]="visible"
-      nzPlacement="left"
-      nzTitle="Sidebar"
-      (nzOnClose)="close()"
-    >
-      <ng-container *nzDrawerContent>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </ng-container>
-    </nz-drawer>
+<button nz-button nzType="primary" (click)="open()">Open</button>
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  nzPlacement="left"
+  nzTitle="Sidebar"
+  (nzOnClose)="close()"
+>
+  <ng-container *nzDrawerContent>
+    <!-- This menu should be another component that takes activities and render a menu with sub menues for each activity -->
+    <ul nz-menu nzMode="inline">
+      <li nz-submenu nzTitle="Chess">
+        <ul>
+          <li nz-menu-item>Learning Chess</li>
+          <li nz-menu-item>Playing Chess</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Gaming">
+        <ul>
+          <li nz-menu-item>Warhammer 2</li>
+          <li nz-menu-item>BRO</li>
+        </ul>
+      </li>
+    </ul>
+  </ng-container>
+</nz-drawer>
